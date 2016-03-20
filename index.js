@@ -7,6 +7,8 @@ var program = require('commander'),
     bitly = new Bitly(process.env.API_KEY),
     fs = require('fs');
 
+var homeDir = process.env.HOME || process.env.HOMEPATH || process.env.USERPROFILE;
+
 if(process.env.API_KEY === undefined) {
     console.log('Add your API key by running: shorturl setup')
 }
@@ -19,7 +21,7 @@ program
     .command('setup [apikey]')
     .description('sets up short url service with bit.ly')
     .action(function(apikey) {
-        fs.writeFile('.env', 'API_KEY=' + apikey, function(err) {
+        fs.writeFile(homeDir + '.env', 'API_KEY=' + apikey, function(err) {
             if(err) {
                 return console.log(err);
             }
