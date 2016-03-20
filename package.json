@@ -1,0 +1,33 @@
+{
+  "name": "short-url-generator",
+  "version": "0.0.1",
+  "description": "short-url-generator generates a short url using bit.ly straight from the terminal.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node_modules/.bin/istanbul test ./node_modules/mocha/bin/_mocha -- tests -R spec --recursive --timeout 4000"
+  },
+  "keywords": [
+    "short-url",
+    "shorturl",
+    "generator",
+    "shorturl-generator"
+  ],
+  "author": "Zee Ahmed",
+  "license": "ISC",
+  "engines": {
+    "node": ">=4.2"
+  },
+  "bin": {
+    "shorturl": "index.js"
+  },
+  "dependencies": {
+    "bitly": "^4.1.1",
+    "commander": "^2.9.0",
+    "dotenv": "^2.0.0"
+  },
+  "devDependencies": {
+    "istanbul": "^0.4.2",
+    "mocha": "^2.4.5",
+    "should": "^8.2.2"
+  }
+}
