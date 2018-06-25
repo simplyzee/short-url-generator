@@ -21,7 +21,7 @@
     "shorturl": "index.js"
   },
   "dependencies": {
-    "bitly": "^4.1.1",
+    "bitly": "^5.0.0",
     "commander": "^2.9.0",
     "dotenv": "^2.0.0"
   },
